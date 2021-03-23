@@ -1,0 +1,1 @@
+<view class="info"><navbar vue-id="09ba4d5c-1" title="消息" isBack="{{false}}" bind:__l="__l"></navbar></view>

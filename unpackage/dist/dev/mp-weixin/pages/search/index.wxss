@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 2420361 */
+  src: url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.eot');
+  src: url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_2420361_6874yxpfz27.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-huifu:before {
+  content: "\e7ac";
+}
+.icon-icon--1:before {
+  content: "\e70d";
+}
+.icon-shoucang:before {
+  content: "\e608";
+}
+.icon-huifu1:before {
+  content: "\e61f";
+}
+.icon-qingchu:before {
+  content: "\e68a";
+}
+.icon-shouye1:before {
+  content: "\e604";
+}
+.icon-quxiao:before {
+  content: "\e64a";
+}
+.icon-youcecaidan:before {
+  content: "\e607";
+}
+.icon-biyan:before {
+  content: "\e613";
+}
+.icon-fanhui:before {
+  content: "\e60f";
+}
+.icon-xiangyou:before {
+  content: "\e860";
+}
+.icon-xiangshang:before {
+  content: "\e652";
+}
+.icon-xiangxia:before {
+  content: "\e72f";
+}
+.icon-xiaoxi3:before {
+  content: "\e617";
+}
+.icon-icon--:before {
+  content: "\e743";
+}
+.icon-xiaoxi2:before {
+  content: "\e60e";
+}
+.icon-xiaoxi-mian:before {
+  content: "\e63d";
+}
+.icon-geren:before {
+  content: "\e630";
+}
+.icon-geren1:before {
+  content: "\e62d";
+}
+.icon-shouye2:before {
+  content: "\e60b";
+}
+.icon-home-fill:before {
+  content: "\ec0a";
+}
+.icon-leimupinleifenleileibie2:before {
+  content: "\e7f8";
+}
+.icon-xiaoxi1:before {
+  content: "\e612";
+}
+.icon-leimupinleifenleileibie:before {
+  content: "\e7f9";
+}
+.icon-pinglun:before {
+  content: "\e62f";
+}
+.icon-huaban:before {
+  content: "\e649";
+}
+.icon-wode:before {
+  content: "\e603";
+}
+.icon-fenxiang:before {
+  content: "\e64b";
+}
+.icon-shouye:before {
+  content: "\e699";
+}
+.icon-xiaoxi:before {
+  content: "\e67a";
+}
+.icon-0-49:before {
+  content: "\e606";
+}
+.icon-like:before {
+  content: "\eb54";
+}
+.search .icon-shouye1 {
+  font-size: 38rpx;
+  margin-left: 24rpx;
+}
+.search .search-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.search .search-top .search-wrap {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+          flex: 7;
+}
+.search .search-top .cancel-btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  padding-top: 8rpx;
+  color: #2b87ff;
+}
+.search .hot-record {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+.search .hot-record .title {
+  font-size: 32rpx;
+}
+.search .hot-record .hot-keywords {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 20rpx;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.search .hot-record .hot-keywords .word {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  background-color: #f4f4f4;
+  border-radius: 30rpx;
+  padding: 8rpx 30rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.search .hot-record .hot-keywords .word.active {
+  color: #2f87fd;
+}
+.search .history {
+  border-top: 5px solid #f5f5f5;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.search .history .history-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 0 40rpx;
+}
+.search .history .history-top .title {
+  line-height: 54rpx;
+  font-size: 32rpx;
+}
+.search .history .history-top .iconfont {
+  padding-bottom: 10rpx;
+}
+.search .history .history-list {
+  padding: 0 40rpx;
+}
+

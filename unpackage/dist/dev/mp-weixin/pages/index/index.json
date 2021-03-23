@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "Best Gamer",
+  "usingComponents": {
+    "searchbar": "/components/search-bar/index",
+    "listbar": "/components/list-bar/index",
+    "navbar": "/components/nav-bar/navbar",
+    "list-item": "/components/list-item/index",
+    "loading": "/components/loading/index"
+  }
+}

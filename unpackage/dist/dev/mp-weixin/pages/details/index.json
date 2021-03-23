@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Best Gamer",
+  "usingComponents": {
+    "navbar": "/components/nav-bar/navbar"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/index",
+    "pages/sort/index",
+    "pages/info/index",
+    "pages/mine/index",
+    "pages/search/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我的",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#c8c8c8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#2b2b2b",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "2px",
+    "height": "50px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/home.png",
+        "selectedIconPath": "static/home1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sort/index",
+        "iconPath": "static/sort.png",
+        "selectedIconPath": "static/sort1.png",
+        "text": "专区"
+      },
+      {
+        "pagePath": "pages/info/index",
+        "iconPath": "static/info.png",
+        "selectedIconPath": "static/info1.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/mine.png",
+        "selectedIconPath": "static/mine1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

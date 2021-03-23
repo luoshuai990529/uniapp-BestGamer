@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "游戏专区",
+  "usingComponents": {
+    "navbar": "/components/nav-bar/navbar",
+    "searchbar": "/components/search-bar/index",
+    "modal": "/components/modal/index",
+    "loading": "/components/loading/index",
+    "history": "/components/history-list/index"
+  }
+}

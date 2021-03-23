@@ -1,0 +1,1 @@
+<view class="mine"><view class="mine-bg"></view><view class="login"><view class="title">登录后，体验精彩功能</view><button open-type="getUserInfo" size="default" type data-event-opts="{{[['getuserinfo',[['getUserInfo',['$event']]]]]}}" bindgetuserinfo="__e">登录</button></view></view>

@@ -1,0 +1,93 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Best Gamer"
+				// "enablePullDownRefresh":true // 是否开启下拉刷新
+			}
+		},
+		{
+			"path": "pages/details/index",
+			"style": {
+				"navigationBarTitleText": "Best Gamer"
+				// "enablePullDownRefresh":true // 是否开启下拉刷新
+			}
+		},
+		{
+			"path": "pages/sort/index",
+			"style": {
+				"navigationBarTitleText": "游戏专区"
+			}
+		},
+		{
+			"path": "pages/info/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		}
+		
+	],
+	"tabBar": {
+	    "color": "#7A7E83", // 文字默认颜色
+	    "selectedColor": "#2b2b2b", // 选择后的文字颜色
+	    "borderStyle": "black", // tabbar 上边框的颜色，可选值 black/white
+	    "backgroundColor": "#ffffff", // 背景颜色
+		"position":"bottom", // top 只支持微信小程序
+		"fontSize":"10px", // 默认文字大小 10px
+		"iconWidth":"24px", //图标默认宽度  高度等比缩放
+		"spacing":"2px", // 图标和文字的间距
+		"height":"50px", // tabbar默认高度
+		// "midButton":{ // 中间按钮 仅在list为偶数时有效
+		// 	width:"80px",
+		// 	height:"50px",
+		// 	text:"按钮", //文字
+		// 	iconPath:"",
+		// 	iconWidth:"24px",
+		// 	backgroundImage:""
+		// },
+	    "list": [{
+	        "pagePath": "pages/index/index",
+			// 图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片，不支持字体图标
+	        "iconPath": "./static/home.png",
+	        "selectedIconPath": "static/home1.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/sort/index",
+	        "iconPath": "static/sort.png",
+	        "selectedIconPath": "static/sort1.png",
+	        "text": "专区"
+	    }, {
+	        "pagePath": "pages/info/index",
+	        "iconPath": "static/info.png",
+	        "selectedIconPath": "static/info1.png",
+	        "text": "消息"
+	    }, {
+	        "pagePath": "pages/mine/index",
+	        "iconPath": "static/mine.png",
+	        "selectedIconPath": "static/mine1.png",
+	        "text": "我的"
+	    }]
+	},
+	"globalStyle": {
+		"navigationStyle":"custom",
+		"navigationBarTextStyle": "black", // 导航栏标题颜色
+		"navigationBarTitleText": "我的",  // 导航栏标题内容 
+		"navigationBarBackgroundColor": "#F8F8F8", //导航栏背景色
+		"backgroundColor": "#c8c8c8", // 下拉出来的窗口背景颜色
+		"backgroundTextStyle": "dark" // 下拉的loading样式
+		// "enablePullDownRefresh":true // 是否开启下拉刷新
+	}
+}

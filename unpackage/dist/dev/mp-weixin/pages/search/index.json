@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "navbar": "/components/nav-bar/navbar",
+    "searchbar": "/components/search-bar/index",
+    "historylist": "/components/history-list/index",
+    "modal": "/components/modal/index"
+  }
+}
