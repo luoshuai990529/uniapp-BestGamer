@@ -196,6 +196,9 @@
           flex-grow: 0;
   padding: 14rpx 14rpx 14rpx 24rpx;
 }
+.u-back-wrap .icon-fanhui.data-v-09dc511e {
+  font-size: 36rpx;
+}
 .u-back-text.data-v-09dc511e {
   padding-left: 4rpx;
   font-size: 30rpx;
@@ -252,6 +255,7 @@
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
+  font-weight: 600;
 
   display: -webkit-box;
   display: -webkit-flex;

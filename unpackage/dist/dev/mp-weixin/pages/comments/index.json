@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "评论",
+  "usingComponents": {
+    "navbar": "/components/nav-bar/navbar",
+    "reviewlist": "/components/review-list/index",
+    "replyinput": "/components/reply-input/index"
+  }
+}

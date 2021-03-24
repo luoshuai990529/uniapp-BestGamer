@@ -5,7 +5,9 @@
     "pages/sort/index",
     "pages/info/index",
     "pages/mine/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/comments/index",
+    "pages/reply/index"
   ],
   "subPackages": [],
   "window": {

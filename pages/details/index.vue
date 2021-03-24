@@ -13,7 +13,8 @@
 			</view>
 			<view class="main-body ">
 				<view class="title">
-					{{articelData.title}}
+					文章内容~~~
+					<!-- {{articelData.title}} -->
 				</view>
 			</view>
 		</view>
@@ -21,12 +22,16 @@
 			<view class="top">
 				评论
 			</view>
+			<reviewlist :commentList="articelData.commentList"></reviewlist>
+		</view>
+		<view class="check-all" @click="jumpToComment(articelData.articelId)">
+			查看全部{{articelData.commentList.length}}条评论
 		</view>
 		<view class="reply">
-			<view class="reply-input">
+			<view class="reply-input" @click="jumpToComment(articelData.articelId)">
 				评论一句,前排打call
 			</view>
-			<view class="revert">
+			<view class="revert" @click="jumpToComment(articelData.articelId)">
 				<icon class="iconfont icon-huifu">
 					<text class="num">{{articelData.comments}}</text>
 				</icon>
@@ -43,12 +48,14 @@
 
 <script>
 	import navbar from '@/components/nav-bar/navbar.vue'
+	import reviewlist from '@/components/review-list/index.vue'
 	import {
 		formatTime
 	} from '../../utils/index.js'
 	export default {
 		components: {
-			navbar
+			navbar,
+			reviewlist
 		},
 		filters: {
 			formatTime
@@ -67,15 +74,161 @@
 					uid: 10086,
 					header: '../../static/image/header.jpg',
 					name: '我锤石你德玛',
-					title: '国服后裔最细对线攻略来啦！楼下细说！',
-					content: '',
+					title: '国服后裔最细对线攻略来啦！下面细说！',
+					content: '有个明世隐就赢了',
 					image: ['../../static/image/houyi.jpg'],
 					tag: '王者荣耀',
 					comments: 128,
 					like: 216,
 					commentList:[
-						
-					]
+					{
+						uid:3,
+						name: '萨斯给',
+						header: '../../static/image/zuozhu.jpg',
+						level:1,
+						like:21,
+						replyName:null,
+						commentId:1,
+						replyTime:1615948353,
+						replyContent:'赞一个！这篇文章不错,希望楼主把具体铭文配置也截图发出来',
+						children:[
+							{
+								uid:2,
+								name: '叶良辰',
+								header: '../../static/image/head2.jpg',
+								level:0,
+								like:24,
+								replyName:null,
+								commentId:2,
+								replyTime:1615959353,
+								replyContent:'我也觉得',
+								children:[{
+									uid:1,
+									name: '我锤石你德玛',
+									header: '../../static/image/header.jpg',
+									level:0,
+									like:1,
+									replyName:'叶良辰',
+									commentId:3,
+									replyTime:1615962353,
+									replyContent:'谢谢支持~',
+									identify:'author',
+									children:[]
+								}]
+							},
+							{
+								uid:1,
+								name: '我锤石你德玛',
+								header: '../../static/image/header.jpg',
+								level:0,
+								like:2,
+								replyName:null,
+								commentId:4,
+								replyTime:1615960353,
+								replyContent:'后期继续更新！',
+								identify:'author',
+								children:[{
+									uid:2,
+									name: '叶良辰',
+									header: '../../static/image/head2.jpg',
+									level:0,
+									like:0,
+									replyName:'我锤石你德玛',
+									commentId:5,
+									replyTime:1615961353,
+									replyContent:'催更催更',
+									children:[{
+										uid:1,
+										name: '我锤石你德玛',
+										header: '../../static/image/header.jpg',
+										level:0,
+										like:6,
+										replyName:'叶良辰',
+										commentId:6,
+										replyTime:1615962353,
+										replyContent:'这周事情比较多，所以时间比较少，下周一继续~',
+										identify:'author',
+										children:[]
+									}]
+								}]
+							},
+							{
+								uid:4,
+								name: '那路多',
+								header: '../../static/image/mingren.jpg',
+								level:0,
+								like:21,
+								replyName:null,
+								commentId:1,
+								replyTime:1615949353,
+								replyContent:'要是辅助不配合怎么办 ~.~',
+								children:[]
+							}
+						]
+					},
+					{
+						uid:2,
+						name: '叶良辰',
+						header: '../../static/image/head2.jpg',
+						level:2,
+						like:1,
+						replyName:null,
+						commentId:7,
+						replyTime:1616148353,
+						replyContent:'沙发',
+						children:[]
+					},
+					{
+						uid:2,
+						name: '叶良辰',
+						header: '../../static/image/head2.jpg',
+						level:3,
+						like:1,
+						replyName:null,
+						commentId:8,
+						replyTime:1616358353,
+						replyContent:'3楼继续！沙发',
+						children:[]
+					},
+					{
+						uid:1,
+						name: '我锤石你德玛',
+						header: '../../static/image/header.jpg',
+						level:4,
+						like:2,
+						replyName:null,
+						commentId:9,
+						replyTime:1616460353,
+						identify:'author',
+						replyContent:'装备可以根据对局灵活选择变通！',
+						children:[
+							{
+								uid:4,
+								name: '那路多',
+								header: '../../static/image/mingren.jpg',
+								level:0,
+								like:0,
+								replyName:null,
+								commentId:11,
+								replyTime:1616462353,
+								replyContent:'细节~',
+								children:[]
+							}
+						]
+					},
+					{
+						uid:4,
+						name: '那路多',
+						header: '../../static/image/mingren.jpg',
+						level:5,
+						like:9,
+						replyName:null,
+						commentId:10,
+						replyTime:1616549353,
+						replyContent:'顶顶顶',
+						children:[]
+					}
+				]
 				}
 			}
 		},
@@ -99,6 +252,11 @@
 					console.log(`跳转对应${this.sortId}专区`)
 				}
 			},
+			jumpToComment(articelId){
+				uni.navigateTo({
+					url:`../comments/index?articelId=${articelId}`
+				})
+			},
 			starHandle(){
 				this.isStar = !this.isStar
 			}
@@ -106,10 +264,11 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@import '../../static/iconfont/iconfont.css';
 	.details {
 		position: relative;
+		padding-bottom: 200rpx;
 		.icon-shouye1 {
 			font-size: 38rpx;
 			margin-left: 24rpx;
@@ -145,7 +304,6 @@
 
 			.main-body {
 				min-height: 400rpx;
-				border: 1px solid black;
 				margin-top: 40rpx;
 				
 				.title {
@@ -158,9 +316,19 @@
 			border-top: 5px solid #f5f5f5;
 		
 			.top {
-				// font-size: ;
+				font-size: 28rpx;
 				padding: 20rpx 30rpx;
 			}
+		}
+		.check-all{
+			line-height: 84rpx;
+			text-align: center;
+			color: #fff;
+			font-size: 28rpx;
+			width: 90%;
+			margin:80rpx auto 0rpx;
+			border-radius: 40rpx;
+			background-image: linear-gradient(to left,#2b8cff,#2bb8ff);
 		}
 		.reply{
 			display: flex;
@@ -170,6 +338,7 @@
 			right: 0;
 			left: 0;
 			z-index: 99;
+			background-color: #fff;
 			padding: 0 20rpx ;
 			border-top: 1px solid #f1f1f1;
 			box-shadow: 0px 20px 30px 6px #f1f1f1;
@@ -199,6 +368,7 @@
 				position: relative;
 				line-height: 92rpx;
 				flex: 1.5;
+				
 				.num{
 					display: inline-block;
 					position: absolute;

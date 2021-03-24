@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "回复",
+  "usingComponents": {
+    "navbar": "/components/nav-bar/navbar",
+    "replyinput": "/components/reply-input/index"
+  }
+}

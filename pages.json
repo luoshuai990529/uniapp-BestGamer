@@ -37,6 +37,18 @@
 			"style": {
 				"navigationBarTitleText": "搜索"
 			}
+		},
+		{
+			"path": "pages/comments/index",
+			"style": {
+				"navigationBarTitleText": "评论"
+			}
+		},
+		{
+			"path": "pages/reply/index",
+			"style": {
+				"navigationBarTitleText": "回复"
+			}
 		}
 		
 	],

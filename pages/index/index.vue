@@ -151,13 +151,6 @@
 			},
 			getData(){
 				// promise方式
-				uniCloud.callFunction({
-				    name: 'test',
-				    data: { a: 1 }
-				  })
-				  .then(res => {
-					  console.log('调用云函数 test ,',res)
-				  });
 				setTimeout(()=>{
 					this.postData=[{
 						type:1,
@@ -169,7 +162,7 @@
 						header:'../../static/image/header.jpg',
 						name:'我锤石你德玛',
 						title:'国服后裔最细对线攻略来啦！楼下细说！',
-						content:'',
+						content:'有个明世隐就赢了',
 						image:['../../static/image/houyi.jpg'],
 						tag:'王者荣耀',
 						comments:128,

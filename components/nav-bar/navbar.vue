@@ -275,6 +275,9 @@
 		flex: 1;
 		flex-grow: 0;
 		padding: 14rpx 14rpx 14rpx 24rpx;
+		.icon-fanhui{
+			font-size: 36rpx;
+		}
 	}
 
 	.u-back-text {
@@ -315,6 +318,7 @@
 
 	.u-slot-content {
 		flex: 1;
+		font-weight: 600;
 		@include vue-flex;
 		align-items: center;
 	}
