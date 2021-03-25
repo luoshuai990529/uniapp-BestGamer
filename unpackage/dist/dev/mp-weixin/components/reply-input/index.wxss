@@ -140,19 +140,24 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 14rpx 0;
-  box-sizing: 10;
-  box-shadow: 0px 20px 30px 6px #f1f1f1;
+  height: 112rpx;
+  padding: 14rpx 0 0;
+  box-shadow: 0px 0px 16px -4px #cccbcb;
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  overflow: hidden;
+}
+.reply-input.focus.data-v-2b4d6f3f {
+  height: 126rpx;
 }
 .reply-input .input-el.data-v-2b4d6f3f {
   -webkit-box-flex: 8.5;
   -webkit-flex: 8.5;
           flex: 8.5;
   padding: 0 40rpx 0 40rpx;
+  margin-bottom: 14rpx;
 }
 .reply-input .input-el input.data-v-2b4d6f3f {
   font-size: 28rpx;
@@ -169,7 +174,7 @@
   -webkit-box-flex: 1.5;
   -webkit-flex: 1.5;
           flex: 1.5;
-  padding: 10rpx 20rpx 10rpx 0;
+  padding: 14rpx 20rpx 10rpx 0;
 }
 .reply-input .send-btn .btn.data-v-2b4d6f3f {
   display: inline-block;
@@ -177,7 +182,7 @@
   min-width: 90rpx;
   color: #fff;
   font-size: 26rpx;
-  padding: 10rpx 20rpx 0;
+  padding: 12rpx 20rpx 0;
   border-radius: 3px;
   background-color: #3c76ff;
 }

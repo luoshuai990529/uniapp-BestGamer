@@ -1,41 +1,33 @@
 {
-    "description": "项目配置文件。",
-    "packOptions": {
-        "ignore": []
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx42cc0c8462c365e0",
+  "projectname": "BestGamer",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
     },
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "minified": true
+    "conversation": {
+      "current": -1,
+      "list": []
     },
-    "compileType": "miniprogram",
-    "libVersion": "",
-    "appid": "wx42cc0c8462c365e0",
-    "projectname": "BestGamer",
-    "condition": {
-        "plugin": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "pages/comments/index",
-                    "pathName": "pages/comments/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "scene": null
-                }
-            ]
-        }
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
     }
+  }
 }

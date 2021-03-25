@@ -24,14 +24,14 @@
 			</view>
 			<reviewlist :commentList="articelData.commentList"></reviewlist>
 		</view>
-		<view class="check-all" @click="jumpToComment(articelData.articelId)">
+		<view class="check-all" @click="jumpToComment(false)">
 			查看全部{{articelData.commentList.length}}条评论
 		</view>
-		<view class="reply">
-			<view class="reply-input" @click="jumpToComment(articelData.articelId)">
+		<view class="reply"> 
+			<view class="reply-input" @click="jumpToComment(true)">
 				评论一句,前排打call
 			</view>
-			<view class="revert" @click="jumpToComment(articelData.articelId)">
+			<view class="revert" @click="jumpToComment(false)">
 				<icon class="iconfont icon-huifu">
 					<text class="num">{{articelData.comments}}</text>
 				</icon>
@@ -47,6 +47,8 @@
 </template>
 
 <script>
+	import { createNamespacedHelpers } from 'vuex'
+	const { mapActions } = createNamespacedHelpers('article')
 	import navbar from '@/components/nav-bar/navbar.vue'
 	import reviewlist from '@/components/review-list/index.vue'
 	import {
@@ -233,11 +235,13 @@
 			}
 		},
 		onLoad(option) {
+			console.log(`获取articelId：${option.articelId}修改 vuex状态，并获取文章数据`)
+			this.changeArticleId(option.articelId) //修改vuex的状态
 			this.getData(option.articelId)
 		},
 		methods: {
+			...mapActions(['changeArticleId']),
 			getData(articelId) {
-				console.log(`根据articelId${articelId}获取数据`)
 				this.sortId = 2
 				this.sortName = '王者荣耀'
 				this.isStar = false
@@ -252,9 +256,9 @@
 					console.log(`跳转对应${this.sortId}专区`)
 				}
 			},
-			jumpToComment(articelId){
+			jumpToComment(isFocus = false){
 				uni.navigateTo({
-					url:`../comments/index?articelId=${articelId}`
+					url:`../comments/index?isFocus=${isFocus}`
 				})
 			},
 			starHandle(){

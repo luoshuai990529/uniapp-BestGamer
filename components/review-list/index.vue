@@ -13,7 +13,7 @@
 					</view>
 				</view>
 				<view class="floor-content">
-					<view class="current-reply">
+					<view class="current-reply" @click="focusReplyInput(item.name,item.uid,item.commentId)">
 						{{item.replyContent}}
 					</view>
 					<flooritem @sendToReply="jumpToReply(item.commentId)" :floorChildren="item.children"></flooritem>
@@ -45,15 +45,14 @@
 		filters: {
 			formatTime
 		},
-		data() {
-			return {
-			}
-		},
 		methods:{
 			jumpToReply(commentId){
 				uni.navigateTo({
 					url:`../../pages/reply/index?commentId=${commentId}`
 				})
+			},
+			focusReplyInput(name,uid,commentId){
+				this.$emit('sendFocusHandle',{name,uid,commentId})
 			}
 		}
 	}

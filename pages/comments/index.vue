@@ -22,9 +22,18 @@
 			</view>
 		</view>
 		<view class="comment-details">
-			<reviewlist :showLimit="false" :commentList="commentList"></reviewlist>
+			<reviewlist 
+			@sendFocusHandle='replyUser' 
+			:showLimit="false" 
+			:commentList="commentList" />
 		</view>
-		<replyinput />
+		<replyinput 
+		@clearCommentId='clearCommentId' 
+		:replyCommentId="replyCommentId" 
+		:placeholder="placeholder" 
+		:isFocus="isFocus" 
+		@sendFocusEvent='focusHandle' 
+		@sendBlurEvent='blurHandle'/>
 	</view>
 </template>
 
@@ -43,9 +52,13 @@
 		},
 		data() {
 			return {
-				readIndex: 0,
-				sortordIndex: 0,
-				showSelector:false,
+				readIndex: 0, //看全部还是看作者
+				sortordIndex: 0, //时间顺序
+				showSelector:false, //是否显示时间顺序选择
+				articelId:0, //文章id
+				replyCommentId:0, //回复的评论id
+				isFocus:false, //输入框是否聚焦
+				placeholder:"说说你的看法吧", //输入框提示内容
 				sortType: [
 					{type: 1,desc: "时间正序"},
 					{type: 2,desc: "时间倒序"}
@@ -362,7 +375,8 @@
 			}
 		},
 		onLoad(options) {
-			console.log('获取文章ID', options.articelId)
+			this.isFocus = options.isFocus == 'true'
+			// this.isFocus = options.isFocus
 		},
 		methods: {
 			jumpToHome() {
@@ -378,6 +392,22 @@
 			},
 			secOrderHandle(index){
 				this.sortordIndex = index
+			},
+			replyUser(userInfo){
+				this.isFocus = true
+				this.placeholder = `回复：${userInfo.name}`
+				this.replyCommentId = userInfo.commentId
+				console.log(`回复名字：${userInfo.name},回复id${userInfo.uid},评论Id${userInfo.commentId}`)
+			},
+			focusHandle(){
+				this.isFocus = true	
+			},
+			blurHandle(){
+				this.isFocus = false
+				this.placeholder = '说说你的看法吧'
+			},
+			clearCommentId(){
+				this.replyCommentId = 0
 			}
 		}
 	}

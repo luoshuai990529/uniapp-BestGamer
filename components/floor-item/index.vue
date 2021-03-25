@@ -1,5 +1,5 @@
 <template>
-	<view class="floor-inner" v-if="floorChildren.length>0">
+	<view class="floor-inner" v-if="floorChildren.length>0" @click="jumpToReply">
 		<block  v-for="(item,index) in flatArr" :key="item.commentId">
 			<view class="reply-item" v-if="!item.replyName && index<2">
 				<text class="reply-name">
@@ -10,7 +10,7 @@
 				<text class="reply-con">{{item.replyContent}}</text>
 			</view>
 		</block>
-		<view class="check-all" v-if="flatArr.length>2" @click="jumpToReply">
+		<view class="check-all" v-if="flatArr.length>2" >
 			查看全部{{flatArr.length}}条评论 <icon class="iconfont icon-xiangyou"></icon>
 		</view>
 	</view>

@@ -4,16 +4,21 @@
 			<icon @click="jumpToHome" class="iconfont icon-shouye1"></icon>
 		</navbar>
 
-		<replyinput />
+		<replyinput :isFocus="isFocus" />
 	</view>
 </template>
 
 <script>
+	import { createNamespacedHelpers } from 'vuex'
+	const { mapState } = createNamespacedHelpers('article')
 	import navbar from '@/components/nav-bar/navbar.vue'
 	import replyinput from '@/components/reply-input/index.vue'
 	export default {
 		props: {
-
+			isFocus:{
+				type:Boolean,
+				default:false
+			}
 		},
 		components: {
 			navbar,
@@ -22,11 +27,11 @@
 		data() {
 			return {}
 		},
-		watch: {
-
+		computed:{
+			...mapState(['articleId'])
 		},
 		onLoad(options) {
-			console.log('要跳转的回复id：', options.commentId)
+			console.log(`当前回复的commentId:${options.commentId},文章id：${this.articleId}` )
 		},
 		methods: {
 			jumpToHome() {
