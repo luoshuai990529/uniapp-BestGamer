@@ -49,4 +49,7 @@
   background-image: -webkit-linear-gradient(right, #b810ff, #0066ff);
   background-image: linear-gradient(to left, #b810ff, #0066ff);
 }
+.mine .login .get-message {
+  margin-top: 20rpx;
+}
 

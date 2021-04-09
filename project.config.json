@@ -38,8 +38,8 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.16.0",
-    "appid": "wx42cc0c8462c365e0",
-    "projectname": "miniprogram-1",
+    "appid": "wx8703d7641e05f69e",
+    "projectname": "BestGamer",
     "cloudfunctionTemplateRoot": "",
     "watchOptions": {
         "ignore": []
@@ -48,6 +48,8 @@
         "hidedInDevtools": []
     },
     "scripts": {},
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
     "condition": {
         "plugin": {
             "list": []

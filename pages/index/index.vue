@@ -55,8 +55,8 @@
 			listItem,
 			loading
 		},
-		mounted() {
-			this.getData()
+		async mounted() {
+			this.getData();
 		},
 		methods: {
 			getPostType(index){

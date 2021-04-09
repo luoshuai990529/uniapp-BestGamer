@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,uN;AACAA,UAAU,CAACC,cAAD,CAAV,C","file":"pagesA/pagesA/comments/index.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pagesA/pagesA/comments/index.vue'\ncreatePage(Page)"],"sourceRoot":""}

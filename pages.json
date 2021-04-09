@@ -8,13 +8,6 @@
 			}
 		},
 		{
-			"path": "pages/details/index",
-			"style": {
-				"navigationBarTitleText": "Best Gamer"
-				// "enablePullDownRefresh":true // 是否开启下拉刷新
-			}
-		},
-		{
 			"path": "pages/sort/index",
 			"style": {
 				"navigationBarTitleText": "游戏专区"
@@ -33,25 +26,39 @@
 			}
 		},
 		{
-			"path": "pages/search/index",
+			"path": "pages/details/index",
 			"style": {
-				"navigationBarTitleText": "搜索"
+				"navigationBarTitleText": "Best Gamer"
+				// "enablePullDownRefresh":true // 是否开启下拉刷新
 			}
-		},
-		{
-			"path": "pages/comments/index",
-			"style": {
-				"navigationBarTitleText": "评论"
-			}
-		},
-		{
-			"path": "pages/reply/index",
+		}
+	],
+	"subPackages": [{
+		"root": "pagesA",
+		"pages": [{
+			"path": "reply/index",
 			"style": {
 				"navigationBarTitleText": "回复"
 			}
+		},
+		{
+			"path": "comments/index",
+			"style": {
+				"navigationBarTitleText": "评论"
+			}
+		},{
+			"path": "search/index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		}]
+	}],
+	"preloadRule": {
+		"pages/details/index": {
+			"network": "all",
+			"packages": ["pagesA"]
 		}
-		
-	],
+	},
 	"tabBar": {
 	    "color": "#7A7E83", // 文字默认颜色
 	    "selectedColor": "#2b2b2b", // 选择后的文字颜色

@@ -6,11 +6,11 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "minified": true
+    "minified": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx42cc0c8462c365e0",
+  "appid": "wx8703d7641e05f69e",
   "projectname": "BestGamer",
   "condition": {
     "search": {
@@ -29,5 +29,6 @@
       "current": -1,
       "list": []
     }
-  }
+  },
+  "cloudfunctionRoot": "./cloudfunctions/"
 }

@@ -1,15 +1,21 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/index",
     "pages/sort/index",
     "pages/info/index",
     "pages/mine/index",
-    "pages/search/index",
-    "pages/comments/index",
-    "pages/reply/index"
+    "pages/details/index"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "reply/index",
+        "comments/index",
+        "search/index"
+      ]
+    }
+  ],
   "window": {
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
@@ -54,6 +60,14 @@
         "text": "我的"
       }
     ]
+  },
+  "preloadRule": {
+    "pages/details/index": {
+      "network": "all",
+      "packages": [
+        "pagesA"
+      ]
+    }
   },
   "usingComponents": {}
 }
