@@ -149,6 +149,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ 12);
 
 
@@ -178,32 +181,34 @@ var _http = _interopRequireDefault(__webpack_require__(/*! ../../utils/http.js *
         } });
 
     },
-    getUserInfo: function getUserInfo(data) {
-      console.log('用户信息：', data);
+    login: function login() {
       uni.login({
         timeout: 5000,
-        success: function () {var _success = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(data) {var errMsg, code, res, access_token, data1, res2, _res2$data$data, openid, session_key;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+        success: function () {var _success = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(data) {var errMsg, code;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
 
                     errMsg =
 
                     data.errMsg, code = data.code;
                     console.log('code:', code);
                     // 获取access_token
-                    _context.next = 4;return _http.default.get('http://127.0.0.1:7001/getAccessToken');case 4:res = _context.sent;
-                    access_token = res.data.data.access_token;
-                    console.log('获取accessToken', access_token);
-                    // 登录页接口 获取 openId session_key
-                    data1 = {
-                      appid: '',
-                      secret: '',
-                      js_code: code,
-                      grant_type: 'authorization_code' };_context.next = 10;return (
+                    // const res = await axios.get('http://127.0.0.1:7001/getAccessToken')
+                    // const {access_token} = res.data.data
+                    // console.log('获取accessToken',access_token)
+                    // 登录页接口 通过code 获取 openId session_key
+                    // const data1 = {
+                    // 				appid: '',
+                    // 				secret: '',
+                    // 				js_code: code,
+                    // 				grant_type: 'authorization_code'
+                    // 			}
+                    // const res2 = await axios.get('http://127.0.0.1:7001/login',data1)
+                    // const {openid,session_key} = res2.data.data
+                  case 2:case "end":return _context.stop();}}}, _callee);}));function success(_x) {return _success.apply(this, arguments);}return success;}() });
 
-                      _http.default.get('http://127.0.0.1:7001/login', data1));case 10:res2 = _context.sent;_res2$data$data =
-                    res2.data.data, openid = _res2$data$data.openid, session_key = _res2$data$data.session_key;case 12:case "end":return _context.stop();}}}, _callee);}));function success(_x) {return _success.apply(this, arguments);}return success;}() });
 
-
-
+    },
+    getUserInfo: function getUserInfo(data) {
+      console.log('用户信息：', data.detail);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

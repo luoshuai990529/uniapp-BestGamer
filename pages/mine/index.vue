@@ -6,12 +6,15 @@
 			<view class="title">
 				登录后，体验精彩功能
 			</view>
-			<button open-type="getUserInfo" @getuserinfo="getUserInfo" size="default" type="">
-				登录
-			</button>
-			<button @click="getMessage" size="default" class="get-message">
+			<button @click="login" type="default" class="login-btn">去登录</button>
+			<!-- <button open-type="getUserInfo" @getuserinfo="getUserInfo" size="default" type="">
+				获取用户信息
+			</button> -->
+			<!-- <button @click="getMessage" size="default" class="get-message">
 				获取订阅消息权限
-			</button>
+			</button> -->
+			<!-- <open-data type="userAvatarUrl"></open-data>
+			<open-data type="userNickName"></open-data> -->
 		</view>
 	</view>
 </template>
@@ -46,8 +49,7 @@
 					}
 				})
 			},
-			getUserInfo(data) {
-				console.log('用户信息：',data)
+			login(){
 				uni.login({
 					timeout: 5000,
 					success:async (data)=> {
@@ -57,21 +59,24 @@
 						} = data
 						console.log('code:', code)
 						// 获取access_token
-						const res = await axios.get('http://127.0.0.1:7001/getAccessToken')
-						const {access_token} = res.data.data
-						console.log('获取accessToken',access_token)
-						// 登录页接口 获取 openId session_key
-						const data1 = {
-										appid: '',
-										secret: '',
-										js_code: code,
-										grant_type: 'authorization_code'
-									}
-						const res2 = await axios.get('http://127.0.0.1:7001/login',data1)
-						const {openid,session_key} = res2.data.data
+						// const res = await axios.get('http://127.0.0.1:7001/getAccessToken')
+						// const {access_token} = res.data.data
+						// console.log('获取accessToken',access_token)
+						// 登录页接口 通过code 获取 openId session_key
+						// const data1 = {
+						// 				appid: '',
+						// 				secret: '',
+						// 				js_code: code,
+						// 				grant_type: 'authorization_code'
+						// 			}
+						// const res2 = await axios.get('http://127.0.0.1:7001/login',data1)
+						// const {openid,session_key} = res2.data.data
 						
 					}
 				})
+			},
+			getUserInfo(data) {
+				console.log('用户信息：',data.detail)
 			}
 		}
 	}
@@ -103,7 +108,9 @@
 				line-height: 64rpx;
 				background-image: linear-gradient(to left, #b810ff, #0066ff);
 			}
-
+			.login-btn{
+				margin-top: 20rpx;
+			}
 			.get-message {
 				margin-top: 20rpx;
 			}

@@ -133,7 +133,7 @@
 		methods: {
 			jumpToHome() {
 				uni.switchTab({
-					url: '../index/index'
+					url: '../../pages/index/index'
 				})
 			},
 			sendMessage() {

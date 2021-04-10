@@ -192,7 +192,7 @@
 			},
 			navigatorToSearch(){
 				uni.navigateTo({
-					url:'../search/index'
+					url:'../../pagesA/search/index'
 				})
 			},
 			refreshHandle(){

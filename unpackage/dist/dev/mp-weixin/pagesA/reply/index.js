@@ -265,7 +265,7 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
   methods: {
     jumpToHome: function jumpToHome() {
       uni.switchTab({
-        url: '../index/index' });
+        url: '../../pages/index/index' });
 
     },
     sendMessage: function sendMessage() {

@@ -3,7 +3,7 @@
 		<view @click="clickInputHandle" class="search-input" :style="{width,borderRadius,backgroundColor}">
 			<view class="search-mask" v-show="!allowFocus"></view>
 			<icon class="iconfont icon-huaban"></icon>
-			<input  :focus="autoFocus" type="text" @focus="focusHandle" value="" placeholder="输入关键词搜索" />
+			<input @input="inputChange"  :focus="autoFocus" type="text" @focus="focusHandle" v-model="inpVal" placeholder="输入关键词搜索" />
 		</view>
 	</view>
 </template>
@@ -30,13 +30,24 @@
 			backgroundColor: {
 				type: String,
 				default: '#f5f5f5'
+			},
+			currentSearch:{
+				type:String,
+				default:''
 			}
 		},
 		data() {
-			return {}
+			return {
+				inpVal:''
+			}
 		},
-		onLoad() {},
+		mounted() {
+			this.inpVal = this.currentSearch?this.currentSearch:this.inpVal
+		},
 		methods: {
+			inputChange(e){
+				this.$emit('getInputValue',e.detail.value)
+			},
 			focusHandle() {
 				this.$emit('focusEvent')
 			},
@@ -80,7 +91,7 @@
 
 			input {
 				width: 90%;
-				color: #999999;
+				color: #161616;
 				text-indent: 10rpx;
 				vertical-align: middle;
 			}

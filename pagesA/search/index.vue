@@ -2,8 +2,11 @@
 	<view class="search">
 		<navbar :title="'搜索'" :isBack="true"><icon @click="jumpToHome" class="iconfont icon-shouye1"></icon></navbar>
 		<view class="search-top">
-			<searchbar class="search-wrap" :allowFocus="true" :autoFocus='true'  @focusEvent="focusHandle"/>
-			<view class="cancel-btn" @click="cancelSearch">
+			<searchbar :currentSearch="searchKey" @getInputValue='inputChange' class="search-wrap" :allowFocus="true" :autoFocus='true'  @focusEvent="focusHandle"/>
+			<view v-show="inputVal" class="search-btn" @click="searchResult">
+				搜索
+			</view>
+			<view v-show="!inputVal" class="cancel-btn" @click="cancelSearch">
 				取消
 			</view>
 		</view>
@@ -41,6 +44,8 @@
 		data() {
 			return {
 				isClear:false,
+				inputVal:'',
+				searchKey:'',
 				hotKeywords:[
 					{text:'CSGO',hot:0},
 					{text:'英雄联盟',hot:1},
@@ -86,13 +91,22 @@
 			historylist,
 			modal
 		},
-		onLoad() {
-			
+		onLoad(option) {
+			this.searchKey = option.search
 		},
 		methods: {
+			searchResult(){
+				console.log('搜索',this.inputVal)
+				uni.redirectTo({
+					url:`./index?search=${this.inputVal}`
+				})
+			},
+			inputChange(value){
+				this.inputVal = value
+			},
 			jumpToHome(){
 				uni.switchTab({
-					url:'../index/index'
+					url:'../../pages/index/index'
 				})
 			},
 			clearHistory(){
@@ -130,7 +144,7 @@
 			.search-wrap{
 				flex: 7;
 			}
-			.cancel-btn{
+			.search-btn,.cancel-btn{
 				flex: 1;
 				padding-top: 8rpx;
 				color: #2b87ff;

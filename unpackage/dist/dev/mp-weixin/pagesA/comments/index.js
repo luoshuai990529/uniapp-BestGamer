@@ -522,7 +522,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     jumpToHome: function jumpToHome() {
       uni.switchTab({
-        url: '../index/index' });
+        url: '../../pages/index/index' });
 
     },
     unfoldHandle: function unfoldHandle() {

@@ -400,7 +400,7 @@ var _index = __webpack_require__(/*! ../../utils/index.js */ 56);function ownKey
     },
     jumpToComment: function jumpToComment() {var isFocus = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
       uni.navigateTo({
-        url: "../comments/index?isFocus=".concat(isFocus) });
+        url: "../../pagesA/comments/index?isFocus=".concat(isFocus) });
 
     },
     starHandle: function starHandle() {

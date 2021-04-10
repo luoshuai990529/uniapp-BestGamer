@@ -145,14 +145,25 @@ var _default =
 
     backgroundColor: {
       type: String,
-      default: '#f5f5f5' } },
+      default: '#f5f5f5' },
+
+    currentSearch: {
+      type: String,
+      default: '' } },
 
 
   data: function data() {
-    return {};
+    return {
+      inpVal: '' };
+
   },
-  onLoad: function onLoad() {},
+  mounted: function mounted() {
+    this.inpVal = this.currentSearch ? this.currentSearch : this.inpVal;
+  },
   methods: {
+    inputChange: function inputChange(e) {
+      this.$emit('getInputValue', e.detail.value);
+    },
     focusHandle: function focusHandle() {
       this.$emit('focusEvent');
     },

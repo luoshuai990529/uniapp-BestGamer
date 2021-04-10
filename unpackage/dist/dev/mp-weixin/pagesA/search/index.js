@@ -169,10 +169,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 {
   data: function data() {
     return {
       isClear: false,
+      inputVal: '',
+      searchKey: '',
       hotKeywords: [
       { text: 'CSGO', hot: 0 },
       { text: '英雄联盟', hot: 1 },
@@ -218,13 +223,22 @@ __webpack_require__.r(__webpack_exports__);
     historylist: historylist,
     modal: modal },
 
-  onLoad: function onLoad() {
-
+  onLoad: function onLoad(option) {
+    this.searchKey = option.search;
   },
   methods: {
+    searchResult: function searchResult() {
+      console.log('搜索', this.inputVal);
+      uni.redirectTo({
+        url: "./index?search=".concat(this.inputVal) });
+
+    },
+    inputChange: function inputChange(value) {
+      this.inputVal = value;
+    },
     jumpToHome: function jumpToHome() {
       uni.switchTab({
-        url: '../index/index' });
+        url: '../../pages/index/index' });
 
     },
     clearHistory: function clearHistory() {

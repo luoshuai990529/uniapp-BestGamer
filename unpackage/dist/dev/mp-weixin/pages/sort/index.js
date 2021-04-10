@@ -330,7 +330,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     navigatorToSearch: function navigatorToSearch() {
       uni.navigateTo({
-        url: '../search/index' });
+        url: '../../pagesA/search/index' });
 
     },
     refreshHandle: function refreshHandle() {var _this = this;

@@ -258,7 +258,7 @@
 			},
 			jumpToComment(isFocus = false){
 				uni.navigateTo({
-					url:`../comments/index?isFocus=${isFocus}`
+					url:`../../pagesA/comments/index?isFocus=${isFocus}`
 				})
 			},
 			starHandle(){

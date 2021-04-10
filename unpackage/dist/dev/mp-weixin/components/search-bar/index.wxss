@@ -167,7 +167,7 @@
 }
 .search-bar .search-input input.data-v-5edc66ac {
   width: 90%;
-  color: #999999;
+  color: #161616;
   text-indent: 10rpx;
   vertical-align: middle;
 }

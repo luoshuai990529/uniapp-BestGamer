@@ -153,7 +153,7 @@
   -webkit-flex: 7;
           flex: 7;
 }
-.search .search-top .cancel-btn {
+.search .search-top .search-btn, .search .search-top .cancel-btn {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;

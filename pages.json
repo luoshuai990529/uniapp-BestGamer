@@ -88,12 +88,14 @@
 	        "iconPath": "static/sort.png",
 	        "selectedIconPath": "static/sort1.png",
 	        "text": "专区"
-	    }, {
-	        "pagePath": "pages/info/index",
-	        "iconPath": "static/info.png",
-	        "selectedIconPath": "static/info1.png",
-	        "text": "消息"
-	    }, {
+	    }, 
+		// {
+	 //        "pagePath": "pages/info/index",
+	 //        "iconPath": "static/info.png",
+	 //        "selectedIconPath": "static/info1.png",
+	 //        "text": "消息"
+	 //    }, 
+		{
 	        "pagePath": "pages/mine/index",
 	        "iconPath": "static/mine.png",
 	        "selectedIconPath": "static/mine1.png",
